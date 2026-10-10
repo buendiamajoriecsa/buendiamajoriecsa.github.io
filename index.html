@@ -3,216 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Skills | Data Analyst Profile</title>
+    <title>Majorie - Portfolio</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background: url('bc2.jpg') no-repeat center center fixed;
+            /* Static Background Image */
+            background-image: url('bc.jpg');
             background-size: cover;
-            color: #333;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #000000;
+            
+            color: #f8fafc;
             min-height: 100vh;
+        }
+
+        /* Sticky Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid #dc2626;
+        }
+
+        .nav-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .container {
+        .nav-btn {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #dc2626;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #dc2626;
+            color: #ffffff;
+            border-color: #ef4444;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Sections na may solid black background at red border */
+        section {
+            min-height: 80vh;
+            padding: 60px 20px;
             max-width: 1000px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(8px);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            margin: 40px auto;
+            background-color: #000000;
+            border-radius: 10px;
+            border: 1px solid #dc2626;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.15);
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            color: #1a2a3a;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-
-        header p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-card {
-            background: #ffffff;
-            border-left: 5px solid #0066cc;
-            border-radius: 8px;
+        /* --- STYLES PARA SA HOME SECTION --- */
+        .home-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
             padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-height: 60vh;
         }
 
-        .skill-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        .profile-img-box {
+            flex-shrink: 0;
         }
 
-        .skill-card h2 {
-            font-size: 1.25rem;
-            color: #0066cc;
-            margin-bottom: 12px;
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #dc2626;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+        }
+
+        .home-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .home-text h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .home-text h3 {
+            font-size: 18px;
+            color: #dc2626;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .home-text p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        /* --- DETAILED PROFILE CONTENT --- */
+        .profile-details {
+            padding: 0 20px;
+        }
+
+        .profile-details h2 {
+            color: #ef4444;
+            font-size: 24px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .profile-category {
+            margin-bottom: 25px;
+        }
+
+        .profile-category h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .profile-category p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
         }
 
-        .skill-card ul {
-            list-style: none;
-        }
-
-        .skill-card ul li {
-            font-size: 0.95rem;
-            color: #444;
-            padding: 6px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill-card ul li:last-child {
-            border-bottom: none;
-        }
-
-        .skill-card ul li::before {
-            content: "•";
-            color: #0066cc;
+        .btn-primary {
+            background-color: #dc2626;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
             font-weight: bold;
-            display: inline-block;
-            width: 15px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px 15px;
-            }
+        .btn-primary:hover {
+            background-color: #ef4444;
+            transform: translateY(-3px);
+            box-shadow: 0 0 18px rgba(239, 68, 68, 0.8);
+        }
 
-            header h1 {
-                font-size: 1.8rem;
-            }
+        .btn-secondary {
+            background-color: transparent;
+            color: #dc2626;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            border: 2px solid #dc2626;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(220, 38, 38, 0.1);
+            color: #ef4444;
+            border-color: #ef4444;
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Technical Skills</h1>
-            <p>Data Analytics & Information Technology Competencies</p>
-        </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-btn">Home</a>
+            <a href="#profile" class="nav-btn">Profile</a>
+            <a href="#skills" class="nav-btn">Skills</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#problem-solving" class="nav-btn">Problem-Solving</a>
+            <a href="#employability" class="nav-btn">Employability</a>
+            <a href="#resume" class="nav-btn">Resume</a>
+            <a href="#certificates" class="nav-btn">Certificates/Achievements</a>
+            <a href="#github" class="nav-btn">Github</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+            <a href="#reflection" class="nav-btn">Reflection</a>
+        </div>
+    </nav>
 
-        <main class="skills-grid">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <div class="profile-img-box">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            </div>
 
-            <!-- Data Analysis -->
-            <section class="skill-card">
-                <h2>Data Analysis</h2>
-                <ul>
-                    <li>Exploratory Data Analysis (EDA)</li>
-                    <li>Data Cleaning & Preprocessing</li>
-                    <li>Statistical Analysis & Summarization</li>
-                    <li>Data Visualization & Reporting</li>
-                </ul>
-            </section>
+            <div class="home-text">
+                <h1>Hi, I am Majorie</h1>
+                <h3>4th Year BSIT Student & Data Analyst</h3>
+                <p>
+                    As a senior BSIT student, I specialize in transforming raw data into actionable insights through data cleaning, analysis, and visualization.
+                </p>
 
-            <!-- Programming -->
-            <section class="skill-card">
-                <h2>Programming</h2>
-                <ul>
-                    <li>Python (Pandas, NumPy, Matplotlib)</li>
-                    <li>SQL (Querying & Aggregation)</li>
-                    <li>Data Scripting & Automation</li>
-                </ul>
-            </section>
+                <div class="btn-group">
+                    <a href="#contact" class="btn-primary">Hire Me</a>
+                    <a href="#resume" class="btn-secondary">Download Resume</a>
+                    <a href="#projects" class="btn-secondary">View My Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Database -->
-            <section class="skill-card">
-                <h2>Database</h2>
-                <ul>
-                    <li>Relational Database Management (MySQL)</li>
-                    <li>Data Structuring & Schema Basics</li>
-                    <li>CRUD Operations & Join Queries</li>
-                </ul>
-            </section>
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="profile-details">
+            <h2>Professional Profile</h2>
 
-            <!-- Tools & Visualization -->
-            <section class="skill-card">
-                <h2>Tools & Analytics Platforms</h2>
-                <ul>
-                    <li>Microsoft Excel (Pivot Tables, Advanced Formulas)</li>
-                    <li>Power BI / Tableau (Dashboarding)</li>
-                    <li>Git & GitHub (Version Control)</li>
-                </ul>
-            </section>
+            <div class="profile-category">
+                <h4>About Me</h4>
+                <p>
+                    Hello! I’m Majorie, a senior Bachelor of Science in Information Technology (BSIT) student with a strong passion for transforming raw data into actionable business insights. Throughout my academic journey, I have developed a solid foundation in core IT principles, system workflows, and modern web technologies, while steadily sharpening my focus toward Data Analytics.
+                </p>
+            </div>
 
-            <!-- Web Development -->
-            <section class="skill-card">
-                <h2>Web Development</h2>
-                <ul>
-                    <li>HTML5 & CSS3 (Portfolio & Dashboard Layouts)</li>
-                    <li>GitHub Pages Hosting</li>
-                </ul>
-            </section>
+            <div class="profile-category">
+                <h4>Technical Strengths & Skills</h4>
+                <p>
+                    My technical toolkit bridges traditional IT with data-driven decision-making. I have experience working with version control platforms like GitHub, document and asset management, and data structuring. My analytical skills focus on data cleaning, exploratory data analysis, and data visualization, allowing me to translate complex datasets into clear, impactful visual reports and executive summaries.
+                </p>
+            </div>
 
-            <!-- Cloud & Data Operations -->
-            <section class="skill-card">
-                <h2>Cloud & Data Operations</h2>
-                <ul>
-                    <li>Cloud Storage & Asset Organization</li>
-                    <li>Data Auditing & Documentation Management</li>
-                </ul>
-            </section>
+            <div class="profile-category">
+                <h4>Professional Values & Work Ethic</h4>
+                <p>
+                    I strongly value transparency, meticulous precision, and operational accountability. Whether managing project finances, auditing event breakdowns, or organizing structured data lists, I prioritize accuracy and integrity in everything I build and analyze.
+                </p>
+            </div>
 
-            <!-- Networking -->
-            <section class="skill-card">
-                <h2>Networking</h2>
-                <ul>
-                    <li>Fundamental Network Protocols (TCP/IP, HTTP/HTTPS)</li>
-                    <li>Data Transmission & Client-Server Architecture</li>
-                </ul>
-            </section>
+            <div class="profile-category">
+                <h4>Career Goals & Interest</h4>
+                <p>
+                    I am actively seeking opportunities in Data Analytics, Business Intelligence, and Data Operations. I thrive in roles where I can leverage analytical frameworks to solve complex problems, optimize workflows, and help teams make data-backed strategic decisions. I am eager to apply my technical skills to real-world datasets and contribute to impactful, data-driven projects.
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <!-- Cybersecurity -->
-            <section class="skill-card">
-                <h2>Cybersecurity & Data Privacy</h2>
-                <ul>
-                    <li>Data Privacy Principles & Compliance Basics</li>
-                    <li>Secure Data Handling & File Management</li>
-                </ul>
-            </section>
-
-            <!-- AI & Machine Learning -->
-            <section class="skill-card">
-                <h2>AI & Machine Learning</h2>
-                <ul>
-                    <li>AI-Assisted Data Analysis Workflow</li>
-                    <li>Predictive Modeling Fundamentals</li>
-                </ul>
-            </section>
-
-        </main>
-    </div>
+    <!-- Empty Sections -->
+    <section id="skills"></section>
+    <section id="projects"></section>
+    <section id="problem-solving"></section>
+    <section id="employability"></section>
+    <section id="resume"></section>
+    <section id="certificates"></section>
+    <section id="github"></section>
+    <section id="contact"></section>
+    <section id="reflection"></section>
 
 </body>
 </html>
