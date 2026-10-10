@@ -13,12 +13,12 @@
         }
 
         body {
-            /* Static Background Image batay sa ibinigay mong litrato */
-            background-image: url('bc.jpg');[cite: 1]
+            /* Static Background Image */
+            background-image: url('bc.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            background-color: #000000; /* Fallback kung sakaling hindi mahanap ang image */
+            background-color: #000000;
             
             color: #f8fafc;
             min-height: 100vh;
@@ -71,12 +71,102 @@
             padding: 60px 20px;
             max-width: 1000px;
             margin: 40px auto;
-            
-            /* Solid Black background para sa bawat section */
             background-color: #000000;
             border-radius: 10px;
             border: 1px solid #1e293b;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+        }
+
+        /* --- STYLES PARA SA PROFILE SECTION --- */
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .profile-img-box {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #0ea5e9;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+        }
+
+        .profile-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .profile-text h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .profile-text h3 {
+            font-size: 18px;
+            color: #0ea5e9;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .profile-text p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        /* --- PAANO GINAWA ANG "HIRE ME" BUTTONS --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: #000000;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #38bdf8;
+            transform: translateY(-3px);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #0ea5e9;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            border: 2px solid #0ea5e9;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(14, 165, 233, 0.1);
+            color: #38bdf8;
+            border-color: #38bdf8;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -98,8 +188,33 @@
         </div>
     </nav>
 
-    <!-- Empty Sections -->
-    <section id="profile"></section>
+    <!-- Profile Section (May "Hire Me" Button) -->
+    <section id="profile">
+        <div class="profile-container">
+            <div class="profile-img-box">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+
+            <div class="profile-text">
+                <h1>[Ilagay ang Pangalan Mo Dito]</h1>
+                <h3>[Ilagay ang Title / BSIT Student Dito]</h3>
+                <p>
+                    [Dito mo ilalagay ang maikling paglalarawan o introduction tungkol sa iyong sarili, iyong hilig, at mga layunin sa larangan ng IT.]
+                </p>
+
+                <!-- DITO ANG PAANO GINAWA ANG "HIRE ME" BUTTON -->
+                <div class="btn-group">
+                    <!-- Kapag pinindot ang "Hire Me", pupunta ito sa #contact section -->
+                    <a href="#contact" class="btn-primary">Hire Me</a>
+                    
+                    <!-- Pwede ring maglagay ng "Download Resume" link -->
+                    <a href="#resume" class="btn-secondary">View Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Sections para sa iba pang Buttons -->
     <section id="skills"></section>
     <section id="projects"></section>
     <section id="problem-solving"></section>
