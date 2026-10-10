@@ -1,290 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majorie | Personal Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#475569'
-                    }
-                }
-            }
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-    </script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Sticky Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #1e293b;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-btn {
+            background-color: #334155;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* Blank Sections Placeholder */
+        section {
+            min-height: 80vh;
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        /* Optional Section Heading Style (Zero content inside body) */
+        section h2 {
+            font-size: 24px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+<body>
 
-    <!-- Navigation Header -->
-    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#home" class="text-xl font-bold tracking-wider text-primary">PORTFOLIO</a>
-            
-            <div class="hidden md:flex space-x-6 items-center text-sm font-medium">
-                <a href="#profile" class="hover:text-primary transition">Profile</a>
-                <a href="#skills" class="hover:text-primary transition">Skills</a>
-                <a href="#projects" class="hover:text-primary transition">Projects</a>
-                <a href="#experience" class="hover:text-primary transition">Experience</a>
-                <a href="#contact" class="hover:text-primary transition">Contact</a>
-                
-                <!-- Dark Mode Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-primary">
-                    <i id="theme-icon" class="fas font-solid fa-moon"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2 border-b border-gray-200 dark:border-gray-800">
-            <a href="#profile" class="block py-2 hover:text-primary">Profile</a>
-            <a href="#skills" class="block py-2 hover:text-primary">Skills</a>
-            <a href="#projects" class="block py-2 hover:text-primary">Projects</a>
-            <a href="#experience" class="block py-2 hover:text-primary">Experience</a>
-            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#profile" class="nav-btn">Profile</a>
+            <a href="#skills" class="nav-btn">Skills</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#problem-solving" class="nav-btn">Problem-Solving</a>
+            <a href="#employability" class="nav-btn">Employability</a>
+            <a href="#resume" class="nav-btn">Resume</a>
+            <a href="#certificates" class="nav-btn">Certificates/Achievements</a>
+            <a href="#github" class="nav-btn">Github</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+            <a href="#reflection" class="nav-btn">Reflection</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen pt-24 pb-12 flex items-center justify-center relative px-4">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <div class="inline-block px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-primary text-sm font-semibold tracking-wide">
-                <i class="fas font-solid fa-circle-check mr-2"></i>Available for Opportunities
-            </div>
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                Hi, I'm <span class="text-primary">Majorie</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                BS Information Technology Student & Event Administrator. Passionate about web development, IT documentation, and organized project management.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="#contact" class="px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition">
-                    Contact Me
-                </a>
-                <a href="#projects" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition">
-                    View Projects
-                </a>
-            </div>
-
-            <div class="pt-8 flex justify-center space-x-6 text-2xl text-gray-500 dark:text-gray-400">
-                <a href="https://github.com" target="_blank" class="hover:text-primary transition"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:example@email.com" class="hover:text-primary transition"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+    <!-- Empty Sections (Dito mo ilalagay ang content mo) -->
+    <section id="profile">
+        <!-- Dito ang Profile -->
     </section>
 
-    <!-- Profile / About Section -->
-    <section id="profile" class="py-20 bg-white dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold">BSIT Student & Organized Event Leader</h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        I specialize in web technology fundamentals, documentation, and operational administration. With a strong background in managing financial turnover letters, budget records, and participant registration lists, I prioritize accuracy, structure, and operational transparency.
-                    </p>
-                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                        <li><i class="fas fa-check text-primary mr-2"></i> <strong>Degree:</strong> BS in Information Technology</li>
-                        <li><i class="fas fa-check text-primary mr-2"></i> <strong>Focus:</strong> Web Development, IT Support & Administration</li>
-                        <li><i class="fas fa-check text-primary mr-2"></i> <strong>Key Strengths:</strong> Transparency, Data Precision, Technical Documentation</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <h4 class="font-bold text-lg mb-4">Highlights</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-3">
-                            <div class="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-primary">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-semibold">Web Hosting & Projects</h5>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Experience in building and hosting static websites via GitHub Pages.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-primary">
-                                <i class="fas fa-file-invoice-dollar"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-semibold">Event Financial Management</h5>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Handled fund turnovers, itemized expense breakdowns, sales invoices, and receipts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="skills">
+        <!-- Dito ang Skills -->
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Technical & Admin Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Skill Card 1 -->
-                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:border-primary transition">
-                    <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
-                    <h3 class="font-semibold">HTML5 & CSS3</h3>
-                    <p class="text-xs text-gray-500 mt-1">Web Structure & Layouts</p>
-                </div>
-                <!-- Skill Card 2 -->
-                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:border-primary transition">
-                    <i class="fab fa-github text-4xl text-gray-800 dark:text-white mb-3"></i>
-                    <h3 class="font-semibold">Git & GitHub</h3>
-                    <p class="text-xs text-gray-500 mt-1">Version Control & Hosting</p>
-                </div>
-                <!-- Skill Card 3 -->
-                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:border-primary transition">
-                    <i class="fas fa-file-word text-4xl text-blue-600 mb-3"></i>
-                    <h3 class="font-semibold">MS Office / Word</h3>
-                    <p class="text-xs text-gray-500 mt-1">Formal Documentation</p>
-                </div>
-                <!-- Skill Card 4 -->
-                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:border-primary transition">
-                    <i class="fas fa-calculator text-4xl text-green-500 mb-3"></i>
-                    <h3 class="font-semibold">Financial Admin</h3>
-                    <p class="text-xs text-gray-500 mt-1">Budgeting & Expense Tracking</p>
-                </div>
-            </div>
-        </div>
+    <section id="projects">
+        <!-- Dito ang Projects -->
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects & Work</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold text-primary uppercase">Web Development</span>
-                        <h3 class="text-xl font-bold">Personal Portfolio Site</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">
-                            A responsive personal portfolio website hosted on GitHub Pages, featuring clean design, smooth navigation, and dark mode support.
-                        </p>
-                        <div class="flex space-x-2 pt-2">
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">HTML</span>
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">Tailwind CSS</span>
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">GitHub Pages</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold text-primary uppercase">Event Management</span>
-                        <h3 class="text-xl font-bold">Seminar Fund Turnover & Masterlist</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm">
-                            Created formal turnover letters, attendee master lists, and itemized financial breakdown templates for student seminar organizing committees.
-                        </p>
-                        <div class="flex space-x-2 pt-2">
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">MS Word</span>
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">Documentation</span>
-                            <span class="px-2.5 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded">Financial Tracking</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="problem-solving">
+        <!-- Dito ang Problem-Solving -->
     </section>
 
-    <!-- Experience / Timeline -->
-    <section id="experience" class="py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Experience & Leadership</h2>
-            <div class="space-y-8">
-                <div class="border-l-4 border-primary pl-6 space-y-2">
-                    <span class="text-sm text-gray-500">October 2026</span>
-                    <h3 class="text-xl font-bold">Seminar Treasurer & Event Administrator</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Current Trends Seminar Committee</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Managed seminar funds turnover, verified payment receipts, structured sales invoices, and prepared participant attendance master lists.
-                    </p>
-                </div>
-                <div class="border-l-4 border-primary pl-6 space-y-2">
-                    <span class="text-sm text-gray-500">4th Year Student</span>
-                    <h3 class="text-xl font-bold">BS in Information Technology</h3>
-                    <p class="text-gray-600 dark:text-gray-300">College / University</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Focusing on web technologies, network fundamentals, system analysis, and IT documentation.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <section id="employability">
+        <!-- Dito ang Employability -->
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white dark:bg-gray-800">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-8">
-                Feel free to send a message for collaborations or inquiries!
-            </p>
-            <form class="space-y-4 text-left max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Name</label>
-                    <input type="text" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Email</label>
-                    <input type="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Message</label>
-                    <textarea rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                </div>
-                <button type="submit" class="w-full py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-700 transition">
-                    Send Message
-                </button>
-            </form>
-        </div>
+    <section id="resume">
+        <!-- Dito ang Resume -->
     </section>
 
-    <!-- Footer -->
-    <footer class="py-6 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
-        <p>© 2026 Majorie. All Rights Reserved.</p>
-    </footer>
+    <section id="certificates">
+        <!-- Dito ang Certificates/Achievements -->
+    </section>
 
-    <!-- JavaScript for Mobile Menu & Dark Mode -->
-    <script>
-        // Dark Mode Toggle Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
+    <section id="github">
+        <!-- Dito ang Github -->
+    </section>
 
-        themeToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classList.contains('dark')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
+    <section id="contact">
+        <!-- Dito ang Contact -->
+    </section>
 
-        // Mobile Menu Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <section id="reflection">
+        <!-- Dito ang Reflection -->
+    </section>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>
