@@ -1,9 +1,730 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT Industry-Ready Professional Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #002D62; /* Academic / Corporate Navy Blue */
+            --secondary-color: #f4f6f9;
+            --accent-color: #0056b3;
+            --text-color: #333333;
+            --border-color: #cccccc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .group-name {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            color: #666;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .page-num {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .school-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 15px;
+        }
+
+        .school-address {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 10px 0 5px 0;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 5px 0;
+            color: #444;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .quote {
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 15px;
+            background: #e8f0fe;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Navigation Links (Portfolio Structure) */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .nav-item {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+
+        p, li {
+            font-size: 14px;
+        }
+
+        ol, ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Form Inputs */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .line-input {
+            border: none;
+            border-bottom: 1.5px solid #333;
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            outline: none;
+            background: transparent;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .checkbox-grid label {
+            font-size: 13px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        th, td {
+            border: 1px solid #777;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Checklist Styling */
+        .checklist-group {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+        }
+
+        .checklist-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 13.5px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .checklist-group {
+                columns: 1;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello! Welcome sa website ko!</h1>
+
+<div class="container">
+    <!-- Document Header -->
+    <div class="header">
+        <div class="group-name">BUENDIA GROUP</div>
+        <div class="school-title">Datamex College of Saint Adeline</div>
+        <div class="school-address">8167 - Datamex Compound Dr. A. Santos Ave., Sucat, Parañaque City</div>
+        
+        <h1>FINAL PROJECT</h1>
+        <h2>BSIT INDUSTRY-READY PORTFOLIO</h2>
+        <div class="subtitle">(Student Guidelines and Step-by-Step Template)</div>
+        <div class="quote">“My BSIT Industry-Ready Professional Portfolio”</div>
+    </div>
+
+    <!-- Project Purpose -->
+    <section>
+        <h3>Project Purpose</h3>
+        <p>This project is designed to help graduating BSIT students demonstrate the knowledge, technical skills, projects, problem-solving abilities, and professional competencies they have acquired throughout the BSIT program[cite: 1].</p>
+        <p>The final portfolio should demonstrate:</p>
+        <p style="text-align: center; font-weight: bold; color: var(--primary-color);">
+            WHAT I KNOW + WHAT I CAN DO + WHAT I HAVE BUILT + HOW I SOLVE PROBLEMS + HOW I CAN PRESENT MYSELF AS AN IT PROFESSIONAL[cite: 1]
+        </p>
+    </section>
+
+    <!-- Section I: Project Objectives -->
+    <section>
+        <h3>I. PROJECT OBJECTIVES</h3>
+        <ol>
+            <li>Create a professional personal portfolio website[cite: 1].</li>
+            <li>Present technical competencies in Information Technology[cite: 1].</li>
+            <li>Demonstrate programming skills through actual projects[cite: 1].</li>
+            <li>Demonstrate database and SQL skills[cite: 1].</li>
+            <li>Demonstrate web or application development skills[cite: 1].</li>
+            <li>Demonstrate basic networking and troubleshooting skills[cite: 1].</li>
+            <li>Demonstrate cybersecurity awareness[cite: 1].</li>
+            <li>Demonstrate data-analysis skills[cite: 1].</li>
+            <li>Demonstrate basic cloud/deployment knowledge[cite: 1].</li>
+            <li>Demonstrate responsible use of AI tools[cite: 1].</li>
+            <li>Organize and document software projects professionally[cite: 1].</li>
+            <li>Use Git and GitHub for version control[cite: 1].</li>
+            <li>Create a professional resume[cite: 1].</li>
+            <li>Prepare a professional LinkedIn profile[cite: 1].</li>
+            <li>Demonstrate technical communication skills[cite: 1].</li>
+            <li>Participate in a mock IT job interview[cite: 2].</li>
+            <li>Defend and explain a completed IT project[cite: 2].</li>
+            <li>Develop a personal career-development plan[cite: 2].</li>
+        </ol>
+    </section>
+
+    <!-- Section II: Final Portfolio Structure -->
+    <section>
+        <h3>II. FINAL PORTFOLIO STRUCTURE</h3>
+        <p>Your portfolio website must contain the following major sections[cite: 2]:</p>
+        <div class="nav-grid">
+            <a href="#home" class="nav-item">HOME[cite: 2]</a>
+            <a href="#profile" class="nav-item">1. PROFILE[cite: 2]</a>
+            <a href="#skills" class="nav-item">2. TECHNICAL SKILLS[cite: 2]</a>
+            <a href="#projects" class="nav-item">3. PROJECTS[cite: 2]</a>
+            <a href="#troubleshooting" class="nav-item">4. PROBLEM-SOLVING[cite: 2]</a>
+            <a href="#employability" class="nav-item">5. EMPLOYABILITY[cite: 2]</a>
+            <a href="#resume" class="nav-item">6. RESUME[cite: 2]</a>
+            <a href="#achievements" class="nav-item">7. CERTIFICATES[cite: 2]</a>
+            <a href="#github" class="nav-item">8. GITHUB[cite: 2]</a>
+            <a href="#contact" class="nav-item">9. CONTACT[cite: 2]</a>
+            <a href="#reflection" class="nav-item">10. REFLECTION[cite: 2]</a>
+        </div>
+    </section>
+
+    <!-- Step 1: IT Professional Identity -->
+    <section id="profile">
+        <h3>STEP 1 — Define Your IT Professional Identity</h3>
+        <p>Before creating the website, answer the following[cite: 2]:</p>
+        <div class="form-group">
+            <label>Full Name:</label>
+            <input type="text" class="line-input" placeholder="e.g. Marjorie Villanueva">
+        </div>
+        <div class="form-group">
+            <label>BSIT Specialization/Area:</label>
+            <input type="text" class="line-input" placeholder="e.g. Web & Application Development">
+        </div>
+        <div class="form-group">
+            <label>Target IT Position:</label>
+            <input type="text" class="line-input" placeholder="e.g. Associate Web Developer / IT Specialist">
+        </div>
+
+        <div class="form-group">
+            <label>Preferred IT Field:[cite: 2]</label>
+            <div class="checkbox-grid">
+                <label><input type="checkbox"> Web Development[cite: 2]</label>
+                <label><input type="checkbox"> Software Development[cite: 2]</label>
+                <label><input type="checkbox"> Mobile Development[cite: 2]</label>
+                <label><input type="checkbox"> Database Administration[cite: 2]</label>
+                <label><input type="checkbox"> Data Analytics[cite: 2]</label>
+                <label><input type="checkbox"> IT Support[cite: 2]</label>
+                <label><input type="checkbox"> Networking[cite: 2]</label>
+                <label><input type="checkbox"> Cybersecurity[cite: 2]</label>
+                <label><input type="checkbox"> Cloud Computing[cite: 2]</label>
+                <label><input type="checkbox"> AI / Machine Learning[cite: 3]</label>
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+            <label>Professional Statement:[cite: 3]</label>
+            <p style="font-style: italic; background: #f9f9f9; padding: 10px; border-left: 3px solid var(--primary-color);">
+                "I am a BSIT graduate with skills in <input type="text" style="width: 200px; border:none; border-bottom:1px solid #000;">, <input type="text" style="width: 200px; border:none; border-bottom:1px solid #000;">, and <input type="text" style="width: 200px; border:none; border-bottom:1px solid #000;">. I am interested in pursuing a career as a <input type="text" style="width: 200px; border:none; border-bottom:1px solid #000;">."[cite: 3]
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Inventory Template -->
+    <section id="skills">
+        <h3>Skills Inventory Template (Step 2)[cite: 3, 8]</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Skill</th>
+                    <th>Level</th>
+                    <th>Evidence / Project</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Programming</td>
+                    <td>Python[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>Programming</td>
+                    <td>Java / C++ / C#[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>Web</td>
+                    <td>HTML / CSS[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>Web</td>
+                    <td>JavaScript / Bootstrap[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td>SQL / MySQL[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>Tools</td>
+                    <td>Git / GitHub[cite: 8]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 8]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td>AI</td>
+                    <td>AI Tools / Responsible AI Use[cite: 9]</td>
+                    <td>Beginner / Intermediate / Advanced[cite: 9]</td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Proposed Systems List -->
+    <section id="projects">
+        <h3>Proposed Web-Based Projects to Develop (Page 16–18)[cite: 17, 18, 19]</h3>
+        <p>Choose your <strong>PROJECT 1</strong> from the following proposed AI-assisted systems[cite: 17]:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 5%;">#</th>
+                    <th style="width: 40%;">Proposed Web-Based System Title[cite: 17]</th>
+                    <th style="width: 55%;">AI-Assisted Feature[cite: 17]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>AI-Assisted Student Academic Management System[cite: 17]</td>
+                    <td>AI Academic Assistant that answers academic/system-related questions and provides study suggestions based on student records.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AI-Assisted Student Performance Monitoring and Early-Warning System[cite: 17]</td>
+                    <td>AI analyzes grades and attendance and identifies students who may require academic intervention.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>AI-Assisted Inventory and Point-of-Sale Management System[cite: 17]</td>
+                    <td>AI analyzes sales and inventory trends and provides stock/reorder recommendations.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>AI-Assisted Library Management and Book Recommendation System[cite: 17]</td>
+                    <td>AI recommends books based on interests, subjects, borrowing history, or selected topics.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>AI-Assisted Computer Repair Shop Management and Troubleshooting System[cite: 17]</td>
+                    <td>AI analyzes reported computer/device symptoms and provides possible troubleshooting procedures.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>AI-Assisted Restaurant Ordering and Customer Recommendation System[cite: 17]</td>
+                    <td>AI recommends menu items based on customer preferences, previous orders, or selected categories.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>AI-Assisted Clinic Appointment and Patient Records Management System[cite: 17]</td>
+                    <td>AI categorizes basic reported concerns and recommends an appropriate appointment/service category; it does not diagnose.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>AI-Assisted Employee Payroll and Attendance Management System[cite: 17]</td>
+                    <td>AI analyzes attendance patterns and generates summaries or management insights from payroll and attendance data.[cite: 17]</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>AI-Assisted Hotel Reservation and Guest Support System[cite: 17, 18]</td>
+                    <td>AI provides information about rooms, facilities, policies, and assists guests in selecting suitable available rooms.[cite: 17, 18]</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>AI-Assisted Vehicle Rental Management and Recommendation System[cite: 18]</td>
+                    <td>AI recommends available vehicles based on passenger capacity, rental duration, budget, and user requirements.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>AI-Assisted Personal Finance Management and Spending Analysis System[cite: 18]</td>
+                    <td>AI analyzes recorded transactions, identifies spending patterns, and provides budgeting suggestions.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>AI-Assisted Learning Management and Personalized Study Recommendation System[cite: 18]</td>
+                    <td>AI analyzes quiz scores and learning progress and recommends appropriate learning resources or study activities.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>AI-Assisted School Event and Registration Management System[cite: 18]</td>
+                    <td>AI recommends relevant school events based on student interests, course, or previous participation.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>AI-Assisted Job and Internship Management System with Skill Matching[cite: 18]</td>
+                    <td>AI compares student skills and qualifications with stored job/internship requirements and identifies potential matches.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>AI-Assisted E-Commerce Order and Product Recommendation System[cite: 18]</td>
+                    <td>AI recommends products based on customer interests, product categories, and previous transactions.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>AI-Assisted IT Help Desk and Service Ticket Management System[cite: 18]</td>
+                    <td>AI classifies service tickets, identifies possible categories, and provides initial troubleshooting suggestions.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>AI-Assisted Barangay Service Request Management and Classification System[cite: 18]</td>
+                    <td>AI automatically categorizes service requests and summarizes frequently reported community concerns.[cite: 18]</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>AI-Assisted Campus Facility Reservation Management System[cite: 19]</td>
+                    <td>AI recommends appropriate facilities based on activity type, capacity, schedule, and requirements.[cite: 19]</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>AI-Assisted Sales and Customer Management System with AI Sales Insights[cite: 19]</td>
+                    <td>AI analyzes sales and customer records and provides summaries of sales patterns, customer activity, and frequently purchased products.[cite: 19]</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>AI-Assisted Project and Task Management System with Intelligent Task Recommendations[cite: 19]</td>
+                    <td>AI analyzes project tasks and recommends priorities, task grouping, and possible next actions.[cite: 19]</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Troubleshooting Case Template -->
+    <section id="troubleshooting">
+        <h3>Troubleshooting Case Template (Page 10)[cite: 11]</h3>
+        <div class="form-group">
+            <label>Case Number:</label>
+            <input type="text" class="line-input" placeholder="e.g. Case #01">
+        </div>
+        <div class="form-group">
+            <label>Problem:[cite: 11]</label>
+            <input type="text" class="line-input" placeholder="e.g. Computer cannot connect to Wi-Fi Network">
+        </div>
+        <div class="form-group">
+            <label>Possible Causes:[cite: 11]</label>
+            <input type="text" class="line-input" placeholder="Disabled adapter, driver problem, incorrect IP configuration, router problem">
+        </div>
+        <div class="form-group">
+            <label>Diagnostic Procedure:[cite: 11]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Solution:[cite: 11]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Lesson Learned:[cite: 11]</label>
+            <input type="text" class="line-input">
+        </div>
+    </section>
+
+    <!-- AI Usage Log Template -->
+    <section>
+        <h3>AI Usage Log Template (Page 10)[cite: 11]</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date[cite: 11]</th>
+                    <th>Task[cite: 11]</th>
+                    <th>AI Assistance[cite: 11]</th>
+                    <th>My Verification / Result[cite: 11]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="date" style="border:none;"></td>
+                    <td><input type="text" class="line-input"></td>
+                    <td><input type="text" class="line-input"></td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+                <tr>
+                    <td><input type="date" style="border:none;"></td>
+                    <td><input type="text" class="line-input"></td>
+                    <td><input type="text" class="line-input"></td>
+                    <td><input type="text" class="line-input"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Career Development Plan -->
+    <section id="employability">
+        <h3>My IT Career Development Plan (Page 11)[cite: 12]</h3>
+        <div class="form-group">
+            <label>Target Position:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Target IT Field:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>My Current Skills:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Skills I Need to Improve:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Technologies I Plan to Learn:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Certifications I May Pursue:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>My 6-Month Goal:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>My 1-Year Goal:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>My 3-Year Professional Goal:[cite: 12]</label>
+            <input type="text" class="line-input">
+        </div>
+    </section>
+
+    <!-- Final Portfolio Checklist -->
+    <section>
+        <h3>Final Portfolio Checklist (Page 12–13)[cite: 13, 14]</h3>
+        <div class="checklist-group">
+            <label><input type="checkbox"> Professional email[cite: 13]</label>
+            <label><input type="checkbox"> Professional photograph[cite: 13]</label>
+            <label><input type="checkbox"> About Me[cite: 13]</label>
+            <label><input type="checkbox"> Career objective[cite: 13]</label>
+            <label><input type="checkbox"> Resume[cite: 13]</label>
+            <label><input type="checkbox"> LinkedIn[cite: 13]</label>
+            <label><input type="checkbox"> GitHub[cite: 13]</label>
+            <label><input type="checkbox"> Programming skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Web development skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Database skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Networking skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Cybersecurity skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Data analysis skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> Cloud/deployment skills demonstrated[cite: 13]</label>
+            <label><input type="checkbox"> AI literacy evidence[cite: 13]</label>
+            <label><input type="checkbox"> Project 1 completed[cite: 13]</label>
+            <label><input type="checkbox"> Project 2 completed[cite: 13]</label>
+            <label><input type="checkbox"> Project 3 completed[cite: 13]</label>
+            <label><input type="checkbox"> Source code uploaded[cite: 13]</label>
+            <label><input type="checkbox"> GitHub repositories completed[cite: 13]</label>
+            <label><input type="checkbox"> Project documentation completed[cite: 13]</label>
+            <label><input type="checkbox"> Screenshots included[cite: 13]</label>
+            <label><input type="checkbox"> Testing documented[cite: 14]</label>
+            <label><input type="checkbox"> At least one project deployed[cite: 14]</label>
+            <label><input type="checkbox"> Five troubleshooting cases[cite: 14]</label>
+            <label><input type="checkbox"> Security case study[cite: 14]</label>
+            <label><input type="checkbox"> AI usage log[cite: 14]</label>
+            <label><input type="checkbox"> Mock interview completed[cite: 14]</label>
+            <label><input type="checkbox"> Technical interview completed[cite: 14]</label>
+            <label><input type="checkbox"> Project defense completed[cite: 14]</label>
+            <label><input type="checkbox"> Career plan completed[cite: 14]</label>
+            <label><input type="checkbox"> Final reflection completed[cite: 14]</label>
+        </div>
+    </section>
+
+    <!-- Student Project Information (Page 14) -->
+    <section>
+        <h3>Student Project Information (Page 14)[cite: 15]</h3>
+        <div class="form-group">
+            <label>Student Name:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Student ID:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>Program:[cite: 15]</label>
+            <input type="text" class="line-input" value="Bachelor of Science in Information Technology (BSIT)" readonly>
+        </div>
+        <div class="form-group">
+            <label>Section:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>School:[cite: 15]</label>
+            <input type="text" class="line-input" value="Datamex College of Saint Adeline" readonly>
+        </div>
+        <div class="form-group">
+            <label>Instructor / Adviser:[cite: 15]</label>
+            <input type="text" class="line-input" value="RANDY VILLANUEVA" readonly>
+        </div>
+        <div class="form-group">
+            <label>Portfolio URL:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>GitHub URL:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+        <div class="form-group">
+            <label>LinkedIn URL:[cite: 15]</label>
+            <input type="text" class="line-input">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span>RANDY VILLANUEVA[cite: 1]</span>
+        <span>Industry-Ready Portfolio — Student Guidelines[cite: 1]</span>
+        <span>BSIT[cite: 1]</span>
+    </div>
+</div>
+
 </body>
 </html>
