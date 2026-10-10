@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Majorie - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -53,15 +53,15 @@
             border-radius: 6px;
             font-size: 14px;
             font-weight: 500;
-            border: 1px solid #0ea5e9;
+            border: 1px solid #dc2626; /* Red Accent Border */
             transition: all 0.3s ease;
         }
 
         .nav-btn:hover {
-            background-color: #0ea5e9;
-            color: #000000;
-            border-color: #38bdf8;
-            box-shadow: 0 0 12px rgba(14, 165, 233, 0.6);
+            background-color: #dc2626; /* Red Accent Background */
+            color: #ffffff;
+            border-color: #ef4444;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
             transform: translateY(-2px);
         }
 
@@ -96,8 +96,8 @@
             height: 220px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid #0ea5e9;
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+            border: 3px solid #dc2626; /* Red Accent Border */
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
         }
 
         .profile-text {
@@ -113,7 +113,7 @@
 
         .profile-text h3 {
             font-size: 18px;
-            color: #0ea5e9;
+            color: #dc2626; /* Red Accent Text */
             margin-bottom: 16px;
             font-weight: 500;
         }
@@ -125,7 +125,7 @@
             margin-bottom: 25px;
         }
 
-        /* --- PAANO GINAWA ANG "HIRE ME" BUTTONS --- */
+        /* --- BUTTONS --- */
         .btn-group {
             display: flex;
             gap: 15px;
@@ -133,39 +133,39 @@
         }
 
         .btn-primary {
-            background-color: #0ea5e9;
-            color: #000000;
+            background-color: #dc2626; /* Red Primary Button */
+            color: #ffffff;
             padding: 12px 24px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             font-size: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
         }
 
         .btn-primary:hover {
-            background-color: #38bdf8;
+            background-color: #ef4444;
             transform: translateY(-3px);
-            box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+            box-shadow: 0 0 18px rgba(239, 68, 68, 0.8);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: #0ea5e9;
+            color: #dc2626;
             padding: 12px 24px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             font-size: 15px;
-            border: 2px solid #0ea5e9;
+            border: 2px solid #dc2626; /* Red Secondary Button Border */
             transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
-            background-color: rgba(14, 165, 233, 0.1);
-            color: #38bdf8;
-            border-color: #38bdf8;
+            background-color: rgba(220, 38, 38, 0.1);
+            color: #ef4444;
+            border-color: #ef4444;
             transform: translateY(-3px);
         }
     </style>
@@ -188,7 +188,7 @@
         </div>
     </nav>
 
-    <!-- Profile Section (May "Hire Me" Button) -->
+    <!-- Profile Section -->
     <section id="profile">
         <div class="profile-container">
             <div class="profile-img-box">
@@ -196,25 +196,21 @@
             </div>
 
             <div class="profile-text">
-                <h1>HI! I'am Majorie E. Buendia</h1>
-                <h3>Data Analytics</h3>
+                <h1>Hi, I am Majorie</h1>
+                <h3>BSIT Graduate & Data Analyst</h3>
                 <p>
-                  H, I'm Majorie E. Buendia, a BSIT graduate from Datamex College of Saint Adeline, I specialize in transforming raw data into actionable insights through data cleaning, analysis, and visualization.
+                    As a BSIT graduate from Datamex, I specialize in transforming raw data into actionable insights through data cleaning, analysis, and visualization.
                 </p>
 
-                <!-- DITO ANG PAANO GINAWA ANG "HIRE ME" BUTTON -->
                 <div class="btn-group">
-                    <!-- Kapag pinindot ang "Hire Me", pupunta ito sa #contact section -->
                     <a href="#contact" class="btn-primary">Hire Me</a>
-                    
-                    <!-- Pwede ring maglagay ng "Download Resume" link -->
                     <a href="#resume" class="btn-secondary">View Resume</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Empty Sections para sa iba pang Buttons -->
+    <!-- Empty Sections -->
     <section id="skills"></section>
     <section id="projects"></section>
     <section id="problem-solving"></section>
