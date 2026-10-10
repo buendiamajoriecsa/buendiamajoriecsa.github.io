@@ -14,7 +14,7 @@
 
         body {
             /* Static Background Image */
-            background-image: url('bc2.jpg');
+            background-image: url('bc.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -85,6 +85,7 @@
             justify-content: center;
             gap: 40px;
             padding: 20px;
+            margin-bottom: 40px;
         }
 
         .profile-img-box {
@@ -118,11 +119,33 @@
             font-weight: 500;
         }
 
-        .profile-text p {
+        /* --- DETAILED PROFILE CONTENT --- */
+        .profile-details {
+            padding: 0 20px;
+        }
+
+        .profile-details h2 {
+            color: #ef4444;
+            font-size: 24px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .profile-category {
+            margin-bottom: 25px;
+        }
+
+        .profile-category h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .profile-category p {
             font-size: 15px;
             line-height: 1.6;
             color: #cbd5e1;
-            margin-bottom: 25px;
         }
 
         /* --- BUTTONS --- */
@@ -130,6 +153,7 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            margin-top: 25px;
         }
 
         .btn-primary {
@@ -197,7 +221,7 @@
 
             <div class="profile-text">
                 <h1>Hi, I am Majorie</h1>
-                <h3>BSIT Graduate & Data Analyst</h3>
+                <h3>Data Analyst</h3>
                 <p>
                     As a BSIT graduate from Datamex, I specialize in transforming raw data into actionable insights through data cleaning, analysis, and visualization.
                 </p>
@@ -207,6 +231,39 @@
                     <a href="#resume" class="btn-secondary">Download Resume</a>
                     <a href="#projects" class="btn-secondary">View My Projects</a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Detailed Profile Content -->
+        <div class="profile-details">
+            <h2>Professional Profile</h2>
+
+            <div class="profile-category">
+                <h4>About Me</h4>
+                <p>
+                    Hello! I’m Majorie, graduated Bachelor of Science in Information Technology (BSIT) student with a strong passion for transforming raw data into actionable business insights. Throughout my academic journey, I have developed a solid foundation in core IT principles, system workflows, and modern web technologies, while steadily sharpening my focus toward Data Analytics.
+                </p>
+            </div>
+
+            <div class="profile-category">
+                <h4>Technical Strengths & Skills</h4>
+                <p>
+                    My technical toolkit bridges traditional IT with data-driven decision-making. I have experience working with version control platforms like GitHub, document and asset management, and data structuring. My analytical skills focus on data cleaning, exploratory data analysis, and data visualization, allowing me to translate complex datasets into clear, impactful visual reports and executive summaries.
+                </p>
+            </div>
+
+            <div class="profile-category">
+                <h4>Professional Values & Work Ethic</h4>
+                <p>
+                    I strongly value transparency, meticulous precision, and operational accountability. Whether managing project finances, auditing event breakdowns, or organizing structured data lists, I prioritize accuracy and integrity in everything I build and analyze.
+                </p>
+            </div>
+
+            <div class="profile-category">
+                <h4>Career Goals & Interest</h4>
+                <p>
+                    I am actively seeking opportunities in Data Analytics, Business Intelligence, and Data Operations. I thrive in roles where I can leverage analytical frameworks to solve complex problems, optimize workflows, and help teams make data-backed strategic decisions. I am eager to apply my technical skills to real-world datasets and contribute to impactful, data-driven projects.
+                </p>
             </div>
         </div>
     </section>
