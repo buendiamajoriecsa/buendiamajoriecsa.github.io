@@ -14,7 +14,7 @@
 
         body {
             /* Static Background Image */
-            background-image: url('bc.jpg');
+            background-image: url('bc2.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -154,6 +154,70 @@
             color: #cbd5e1;
         }
 
+        /* --- STYLES PARA SA SKILLS SECTION --- */
+        .skills-details {
+            padding: 0 20px;
+        }
+
+        .skills-details h2 {
+            color: #ef4444;
+            font-size: 24px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background-color: rgba(10, 10, 10, 0.6);
+            border: 1px solid #dc2626;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.25);
+            border-color: #ef4444;
+        }
+
+        .skill-card h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+            padding-bottom: 6px;
+        }
+
+        .skill-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skill-card li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skill-card li::before {
+            content: "•";
+            color: #dc2626;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
         /* --- BUTTONS --- */
         .btn-group {
             display: flex;
@@ -277,8 +341,93 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-details">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Data Analysis</h4>
+                    <ul>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Data Cleaning & Preprocessing</li>
+                        <li>Statistical Analysis & Summarization</li>
+                        <li>Data Visualization & Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Programming</h4>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>SQL (Querying & Aggregation)</li>
+                        <li>Data Scripting & Automation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Database</h4>
+                    <ul>
+                        <li>Relational Database Management (MySQL)</li>
+                        <li>Data Structuring & Schema Basics</li>
+                        <li>CRUD Operations & Join Queries</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Tools & Analytics Platforms</h4>
+                    <ul>
+                        <li>Microsoft Excel (Pivot Tables, Advanced Formulas)</li>
+                        <li>Power BI / Tableau (Dashboarding)</li>
+                        <li>Git & GitHub (Version Control)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Web Development</h4>
+                    <ul>
+                        <li>HTML5 & CSS3 (Portfolio & Dashboard Layouts)</li>
+                        <li>GitHub Pages Hosting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Cloud & Data Operations</h4>
+                    <ul>
+                        <li>Cloud Storage & Asset Organization</li>
+                        <li>Data Auditing & Documentation Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Networking</h4>
+                    <ul>
+                        <li>Fundamental Network Protocols (TCP/IP, HTTP/HTTPS)</li>
+                        <li>Data Transmission & Client-Server Architecture</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Cybersecurity & Data Privacy</h4>
+                    <ul>
+                        <li>Data Privacy Principles & Compliance Basics</li>
+                        <li>Secure Data Handling & File Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h4>AI & Machine Learning</h4>
+                    <ul>
+                        <li>AI-Assisted Data Analysis Workflow</li>
+                        <li>Predictive Modeling Fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Empty Sections -->
-    <section id="skills"></section>
     <section id="projects"></section>
     <section id="problem-solving"></section>
     <section id="employability"></section>
