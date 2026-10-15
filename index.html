@@ -417,35 +417,55 @@
         </div>
     </div>
 
-    <!-- PROJECT 2 BOX -->
-    <div style="background-color: rgba(0, 0, 0, 0.9); border: 2px solid #ff0000; border-radius: 12px; padding: 30px; margin-bottom: 30px; color: #ffffff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);">
-        <h3 style="color: #ff0000; margin-top: 0; font-size: 1.8rem;">Project 2: Campus WiFi Performance Analysis</h3>
-        <p style="color: #aaa; font-style: italic; margin-bottom: 15px;">Data Analytics & Spreadsheet Project</p>
-        
-        <p style="color: #ccc; line-height: 1.6; margin-bottom: 15px;">
-            Evaluated campus WiFi performance using Microsoft Excel. Performed data cleaning, descriptive statistics, PivotTable analysis, and correlation analysis.
-        </p>
-        
-        <h4 style="color: #fff; margin-top: 20px; margin-bottom: 10px; font-size: 1.1rem;">Key Metrics & Findings:</h4>
-        <ul style="color: #bbb; line-height: 1.6; padding-left: 20px; margin-bottom: 20px;">
-            <li>Average Speed: <strong>76.51 Mbps</strong></li>
-            <li>Highest Speed: Computer Lab (82.44 Mbps)</li>
-            <li>Lowest Speed & Highest Downtime: Student Center (65.63 Mbps / 28.20 mins)</li>
-            <li>Strong negative correlation between downtime and user satisfaction ($r = -0.748$)</li>
-        </ul>
+   <!-- PROJECT 2: Campus WiFi Performance Analysis -->
+<div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+    <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.8rem !important;">Project 2: Campus WiFi Performance Analysis</h3>
+    <p style="color: #aaa !important; font-style: italic !important; margin-bottom: 15px !important;">Data Analytics & Spreadsheet Case Study</p>
+    
+    <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 15px !important;">
+        <strong>Scenario:</strong> Evaluated the performance of the campus WiFi network using Microsoft Excel. Analyzed 50 WiFi records to identify network performance patterns, user types, location bottlenecks, and provided evidence-based recommendations[cite: 11, 15].
+    </p>
 
-        <!-- GRAPH PICTURE -->
-        <div style="text-align: center; margin: 20px 0;">
-            <img src="wifi_charts.png" alt="WiFi Performance Graphs" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #444;">
-        </div>
+    <!-- 1. DATA CLEANING & DESCRIPTIVE STATISTICS -->
+    <h4 style="color: #fff !important; margin-top: 20px !important; margin-bottom: 10px !important; font-size: 1.1rem !important;">1. Data Inspection & Descriptive Statistics:</h4>
+    <ul style="color: #bbb !important; line-height: 1.6 !important; padding-left: 20px !important; margin-bottom: 15px !important;">
+        <li><strong>Data Cleaning:</strong> Checked for missing/invalid values and duplicate record IDs (None observed in the 50 records)[cite: 11]. Ensured numerical formatting for speeds, connected devices, and downtime[cite: 11].</li>
+        <li><strong>Download Speed:</strong> Mean = 76.51 Mbps | Median = 77.10 Mbps | Min = 44.5 Mbps | Max = 103.8 Mbps[cite: 11]</li>
+        <li><strong>Upload Speed:</strong> Mean = 21.91 Mbps | Median = 20.95 Mbps | Min = 9.10 Mbps | Max = 34.5 Mbps[cite: 11]</li>
+        <li><strong>Connected Devices:</strong> Mean = 40.28 | Median = 47 | Min = 8 | Max = 64[cite: 11]</li>
+        <li><strong>Downtime Minutes:</strong> Mean = 18.40 | Median = 18.5 | Min = 0 | Max = 45[cite: 11]</li>
+        <li><strong>Satisfaction Rating:</strong> Mean = 4.22 | Median = 4.25 | Min = 2.80 | Max = 5.0 (Out of 5)[cite: 11]</li>
+    </ul>
 
-        <h4 style="color: #fff; margin-top: 20px; margin-bottom: 10px; font-size: 1.1rem;">Recommendations:</h4>
-        <ol style="color: #bbb; line-height: 1.6; padding-left: 20px;">
-            <li>Upgrade WiFi equipment and bandwidth capacity at the Student Center.</li>
-            <li>Implement regular network maintenance to reduce overall downtime.</li>
-        </ol>
+    <!-- 2. USER TYPE & LOCATION ANALYSIS -->
+    <h4 style="color: #fff !important; margin-top: 20px !important; margin-bottom: 10px !important; font-size: 1.1rem !important;">2. User Types & Campus Location Insights:</h4>
+    <ul style="color: #bbb !important; line-height: 1.6 !important; padding-left: 20px !important; margin-bottom: 15px !important;">
+        <li><strong>User Distribution (Total 50):</strong> Students = 37 | Faculty = 9 | Staff = 4[cite: 12]</li>
+        <li><strong>Highest Average Download Speed:</strong> Computer Laboratory (82.44 Mbps)[cite: 12, 14]</li>
+        <li><strong>Lowest Average Download Speed:</strong> Student Center (65.63 Mbps)[cite: 12, 14]</li>
+        <li><strong>Highest Average Downtime:</strong> Student Center (28.20 minutes)[cite: 12, 14]</li>
+    </ul>
+
+    <!-- 3. CORRELATION ANALYSIS -->
+    <h4 style="color: #fff !important; margin-top: 20px !important; margin-bottom: 10px !important; font-size: 1.1rem !important;">3. Correlation Analysis:</h4>
+    <ul style="color: #bbb !important; line-height: 1.6 !important; padding-left: 20px !important; margin-bottom: 15px !important;">
+        <li><strong>Connected Devices vs. Download Speed:</strong> $r = -0.009$ (Almost no relationship)[cite: 12, 14].</li>
+        <li><strong>Downtime vs. Satisfaction Rating:</strong> $r = -0.748$ (Strong negative correlation, indicating that higher downtime leads to lower user satisfaction)[cite: 12, 13].</li>
+    </ul>
+
+    <!-- GRAPHS / CHARTS PICTURE -->
+    <div style="text-align: center !important; margin: 20px 0 !important;">
+        <img src="wifi_charts.png" alt="WiFi Performance Graphs" style="width: 100% !important; max-width: 600px !important; border-radius: 6px !important; border: 1px solid #444 !important;">
     </div>
 
+    <!-- 4. RECOMMENDATIONS -->
+    <h4 style="color: #fff !important; margin-top: 20px !important; margin-bottom: 10px !important; font-size: 1.1rem !important;">4. Evidence-Based Recommendations:</h4>
+    <ol style="color: #bbb !important; line-height: 1.6 !important; padding-left: 20px !important;">
+        <li><strong>Investigate the Student Center:</strong> Address the lowest download speed (65.63 Mbps) and highest downtime (28.20 mins) by upgrading equipment and network capacity[cite: 12, 14].</li>
+        <li><strong>Reduce Network Downtime:</strong> Conduct regular network monitoring and maintenance to minimize service interruptions and improve user satisfaction[cite: 14].</li>
+        <li><strong>Continuous Monitoring:</strong> Assess network performance based on multiple parameters rather than just connected device counts[cite: 14].</li>
+    </ol>
+</div>
     <!-- PROJECT 3 BOX -->
     <div style="background-color: rgba(0, 0, 0, 0.9); border: 2px solid #ff0000; border-radius: 12px; padding: 30px; margin-bottom: 30px; color: #ffffff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);">
         <h3 style="color: #ff0000; margin-top: 0; font-size: 1.8rem;">Project 3: Sales & Data Reporting Dashboard</h3>
