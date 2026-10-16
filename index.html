@@ -391,7 +391,7 @@
 
     
 <!-- PROJECTS SECTION -->
-<section id="projects" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
+<section id="projects" style="padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
     <h2 style="color: #ff0000 !important; text-align: center !important; margin-bottom: 40px !important; font-size: 2.5rem !important;">My Projects</h2>
 
     <!-- PROJECT 1: Student Management System (With Step 15 & 16 Documentation) -->
@@ -486,7 +486,61 @@
     </div>
 </section>
     <!-- Empty Sections -->
-    <section id="problem-solving"></section>
+   <!-- PROBLEM-SOLVING SECTION (STEP 17: Data Analytics Troubleshooting Cases) -->
+<section id="problem-solving" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
+    <h2 style="color: #ff0000; text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Step 17: Problem-Solving Portfolio (Data Analytics Cases)</h2>
+
+    <!-- CASE 1 -->
+    <div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+        <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.5rem !important;">Case 1: Handling Missing and Null Values in Raw Dataset</h3>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Problem:</strong> During exploratory data analysis (EDA) and data cleaning of a campus WiFi dataset, several records contained missing or invalid numerical values.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Possible Causes:</strong> Network sensor packet loss, incomplete user log submissions, or system export formatting errors.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Diagnostic Procedure:</strong> Filtered data columns, used conditional formatting to highlight blanks, and checked summary statistics (Mean/Median) for anomalies.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Solution:</strong> Imputed appropriate median values or safely removed corrupted rows after verifying that sample size integrity remained intact.</p>
+        <p style="color: #bbb !important; font-style: italic !important; margin-top: 15px !important;"><strong>Lesson Learned:</strong> Rigorous data inspection prior to analysis prevents skewed descriptive statistics and inaccurate business insights.</p>
+    </div>
+
+    <!-- CASE 2 -->
+    <div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+        <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.5rem !important;">Case 2: Resolving Duplicate Record IDs in Dataset Auditing</h3>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Problem:</strong> Identifying overlapping or duplicate Record IDs that could artificially inflate user counts and metrics.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Possible Causes:</strong> Multiple server logging requests or system database syncing overlaps.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Diagnostic Procedure:</strong> Applied sorting and counting functions (such as COUNTIF) to isolate unique identifiers.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Solution:</strong> Removed duplicate rows to ensure the final report accurately evaluated exactly 50 unique entries.</p>
+        <p style="color: #bbb !important; font-style: italic !important; margin-top: 15px !important;"><strong>Lesson Learned:</strong> Validating primary keys and unique identifiers is an essential first step in data auditing.</p>
+    </div>
+
+    <!-- CASE 3 -->
+    <div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+        <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.5rem !important;">Case 3: Formula Errors in Excel Aggregations (SUMIFS / COUNTIFS)</h3>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Problem:</strong> Summary reports returning incorrect totals or `#VALUE!` errors when grouping data by campus location.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Possible Causes:</strong> Text-formatted numbers, mismatched criteria ranges, or trailing spaces in category names.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Diagnostic Procedure:</strong> Inspected cell formats, evaluated formula syntax arguments, and checked text string lengths.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Solution:</strong> Converted text-formatted numbers using Text-to-Columns and corrected criteria references inside SUMIFS formulas.</p>
+        <p style="color: #bbb !important; font-style: italic !important; margin-top: 15px !important;"><strong>Lesson Learned:</strong> Standardizing data types and formatting safeguards advanced spreadsheet formula calculations.</p>
+    </div>
+
+    <!-- CASE 4 -->
+    <div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+        <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.5rem !important;">Case 4: Misleading Outliers in Descriptive Statistics</h3>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Problem:</strong> Extreme downtime spikes significantly pulled up the average (Mean), misrepresenting typical network performance.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Possible Causes:</strong> Severe network outages restricted to specific isolated locations like the Student Center.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Diagnostic Procedure:</strong> Compared Mean values against Median values and analyzed minimum/maximum extremes.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Solution:</strong> Utilized both Median metrics alongside Mean calculations and created visual PivotCharts to properly contextualize location bottlenecks.</p>
+        <p style="color: #bbb !important; font-style: italic !important; margin-top: 15px !important;"><strong>Lesson Learned:</strong> Relying solely on averages can hide data distribution issues; checking medians provides a clearer picture.</p>
+    </div>
+
+    <!-- CASE 5 -->
+    <div style="background-color: rgba(0, 0, 0, 0.9) !important; border: 2px solid #ff0000 !important; border-radius: 12px !important; padding: 30px !important; margin-bottom: 30px !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;">
+        <h3 style="color: #ff0000 !important; margin-top: 0 !important; font-size: 1.5rem !important;">Case 5: Interpreting Conflicting Correlation Results in User Metrics</h3>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Problem:</strong> Initial assumptions suggested connected devices heavily dictated download speeds ($r = -0.009$), which contradicted expectations.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Possible Causes:</strong> Nonlinear relationships or bandwidth capacity limits affecting performance independently of user count.</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Diagnostic Procedure:</strong> Performed correlation and pivot evaluations across multiple variables (downtime vs. satisfaction).</p>
+        <p style="color: #ccc !important; line-height: 1.6 !important; margin-bottom: 10px !important;"><strong>Solution:</strong> Shifted focus to strong negative indicators like downtime vs. satisfaction ($r = -0.748$) to derive actionable recommendations.</p>
+        <p style="color: #bbb !important; font-style: italic !important; margin-top: 15px !important;"><strong>Lesson Learned:</strong> Data analysis requires objective interpretation rather than relying on initial assumptions.</p>
+    </div>
+
+</section>
     <section id="employability"></section>
    <section id="resume">
     <div class="skills-details" style="text-align: center;">
