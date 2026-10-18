@@ -705,7 +705,72 @@
             </ul>
         </div>
     </section>
-    <section id="contact"></section>
+    <!-- Contact Section -->
+<section id="contact" style="padding: 60px 20px; max-width: 1000px; margin: 40px auto; background-color: #000000; background-image: url('bc2.jpg'); background-size: cover; background-position: center; border-radius: 12px; position: relative;">
+    
+    <!-- Title Section -->
+    <h2 style="color: #ffffff; font-size: 2.8rem; font-weight: bold; margin-bottom: 5px;">Contact</h2>
+    <div style="width: 60px; height: 4px; background-color: #ff0000; margin-bottom: 20px; border-radius: 2px;"></div>
+
+    <p style="color: #cccccc; font-size: 1.1rem; margin-bottom: 30px; line-height: 1.5;">
+        Open to data analytics, sales reporting, and data entry roles. Messages open in your email app.
+    </p>
+
+    <!-- Direct Contact Details -->
+    <div style="margin-bottom: 35px; color: #ffffff; font-size: 1.1rem; line-height: 2;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
+            <strong>Email:</strong> 
+            <span id="user-email" style="color: #ff0000; font-weight: 600;">your.email@gmail.com</span>
+            <button onclick="copyEmail()" style="background: transparent; border: 1px solid #ffffff; color: #ffffff; padding: 4px 14px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; transition: 0.3s;">
+                Copy
+            </button>
+        </div>
+        <div><strong>Phone:</strong> 09XX XXX XXXX</div>
+        <div><strong>Location:</strong> Philippines</div>
+    </div>
+
+    <!-- Contact Form -->
+    <form onsubmit="sendToEmail(event)" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px;">
+        <div>
+            <label for="sender-name" style="display: block; color: #ffffff; margin-bottom: 8px; font-weight: 500;">Your name</label>
+            <input type="text" id="sender-name" required placeholder="Enter your name" style="width: 100%; padding: 14px; background: rgba(0, 0, 0, 0.6); border: 1px solid #333333; border-radius: 8px; color: #ffffff; font-size: 1rem; outline: none; box-sizing: border-box;">
+        </div>
+
+        <div>
+            <label for="sender-message" style="display: block; color: #ffffff; margin-bottom: 8px; font-weight: 500;">Message</label>
+            <textarea id="sender-message" rows="5" required placeholder="Enter your message" style="width: 100%; padding: 14px; background: rgba(0, 0, 0, 0.6); border: 1px solid #333333; border-radius: 8px; color: #ffffff; font-size: 1rem; outline: none; resize: vertical; box-sizing: border-box;"></textarea>
+        </div>
+
+        <button type="submit" style="width: fit-content; padding: 14px 28px; background-color: #ff0000; color: #ffffff; border: none; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+            Send message
+        </button>
+    </form>
+
+</section>
+
+<!-- JavaScript Functions -->
+<script>
+    // Copy Email Functionality
+    function copyEmail() {
+        const emailText = document.getElementById('user-email').innerText;
+        navigator.clipboard.writeText(emailText).then(() => {
+            alert('Email copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+
+    // Direct Email App Opener
+    function sendToEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById('sender-name').value;
+        const message = document.getElementById('sender-message').value;
+        const myEmail = document.getElementById('user-email').innerText;
+
+        const mailtoLink = `mailto:${myEmail}?subject=Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailtoLink;
+    }
+</script>
     <section id="reflection"></section>
 
 </body>
