@@ -668,14 +668,14 @@
                 Problem-Solving Portfolio & Evidence
             </h2>
 
-            <!-- KAHON 1: Problem Solving (Student Form Bug) -->
+          <!-- KAHON 1: Problem Solving (Data Entry & Form Validation) -->
             <div style="background-color: #111; border: 1px solid #333; border-left: 4px solid #ff4d4d; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
-                <h3 style="color: #ff4d4d; margin-top: 0;">Case Study: Empty Field Submission Bug in Student Form</h3>
+                <h3 style="color: #ff4d4d; margin-top: 0;">Case Study: Incomplete Data Entry and Validation in Records</h3>
                 
                 <div style="margin-bottom: 15px;">
                     <h4 style="color: #ff6666; margin-bottom: 5px;">1. Problem</h4>
                     <p style="margin-top: 0; color: #ccc; line-height: 1.6;">
-                        Users were able to submit student records even when important text fields (like Student Name or ID) were left completely blank, resulting in incomplete database entries.
+                        Student and sales records were sometimes submitted with important text fields left completely blank or improperly formatted, resulting in inconsistent data entries.
                     </p>
                 </div>
 
@@ -683,34 +683,34 @@
                     <h4 style="color: #ff6666; margin-bottom: 5px;">2. Possible Causes</h4>
                     <ul style="color: #ccc; line-height: 1.6; margin-top: 0; padding-left: 20px;">
                         <li>Missing input validation attributes in the HTML form elements.</li>
-                        <li>Lack of conditional checking inside the JavaScript function before saving to <code>localStorage</code>.</li>
+                        <li>Lack of standard formatting and data rules in spreadsheet or tabular record sheets.</li>
                     </ul>
                 </div>
 
                 <div style="margin-bottom: 15px;">
                     <h4 style="color: #ff6666; margin-bottom: 5px;">3. Diagnostic Procedure</h4>
                     <ul style="color: #ccc; line-height: 1.6; margin-top: 0; padding-left: 20px;">
-                        <li>Tested the web form by clicking the "Add Student" button without typing anything.</li>
-                        <li>Observed that empty rows or undefined values were successfully added to the student list table.</li>
+                        <li>Tested form submissions by leaving required fields empty to check how errors are handled.</li>
+                        <li>Audited spreadsheet and record lists to spot missing values and unstructured entries.</li>
                     </ul>
                 </div>
 
                 <div style="margin-bottom: 15px;">
                     <h4 style="color: #ff6666; margin-bottom: 5px;">4. Solution</h4>
                     <ul style="color: #ccc; line-height: 1.6; margin-top: 0; padding-left: 20px;">
-                        <li>Added the <code>required</code> attribute to HTML input fields.</li>
-                        <li>Implemented an <code>if</code> statement in JavaScript to check if fields are empty before executing the save function.</li>
+                        <li>Added the <code>required</code> attribute to HTML input fields to restrict blank submissions.</li>
+                        <li>Applied systematic data organization and formatting rules in Microsoft Excel to clean and structure tabular records.</li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 style="color: #ff6666; margin-bottom: 5px;">5. Lesson Learned</h4>
                     <p style="margin-top: 0; color: #ccc; line-height: 1.6;">
-                        Client-side input validation is essential to prevent dirty data entry and maintain overall data quality in web applications.
+                        Early data validation and meticulous data cleaning are essential to prevent dirty data entry and maintain overall data quality.
                     </p>
                 </div>
             </div>
-
+            
             <!-- KAHON 2: STEP 18 - Cybersecurity Case Study (SQL Injection) -->
             <div style="background-color: #111; border: 1px solid #333; border-left: 4px solid #ff4d4d; border-radius: 8px; padding: 25px; margin-bottom: 30px;">
                 <h3 style="color: #ff4d4d; margin-top: 0;">Cybersecurity Case Study — SQL Injection (SQLi)</h3>
